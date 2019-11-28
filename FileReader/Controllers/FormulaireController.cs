@@ -11,6 +11,7 @@ namespace FileReader.Controllers
         // GET: Formulaire
         public ActionResult Index()
         {
+            
             return View();
         }
     }

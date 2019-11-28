@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FileReader.Models
 {
-    public class UsersModels
+    public class UsersModels 
     {
         public List<Users> Utilisateurs { get; set; }
     }
