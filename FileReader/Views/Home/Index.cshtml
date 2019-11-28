@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<script type="text/javascript">
+    {
+        function verifNumber(evt) {
+            var keyCode = evt.which ? evt.which : evt.keyCode;
+            var accept = '0123456789';
+            if (accept.indexOf(String.fromCharCode(keyCode)) >= 0) {
+                return true;
+            } else {
+                return false;
+            }   
+        }
+
+        function verifLetter(evt) {
+            var keyCode = evt.which ? evt.which : evt.keyCode;
+            var accept = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ./*-+';
+            if (accept.indexOf(String.fromCharCode(keyCode)) >= 0) {
+                return true;
+            } else {
+                return false;
+            }
+    }</script>
+
+<head>
+    <style>
+        body {
+            background-color: grey;
+            
+        }
+
+        .bloc {
+            background-color: white;
+            border: 3px solid black;
+            border-radius: 13px;
+            box-shadow: 3px 3px 1px rgba(0,0,0,0.5);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
+
+
+        <!-- Login User Candriam -->    
+        <br />
+        <br />
+        <article class="container mt-5">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6 bloc">
+                    <form method="post" action="/Home/Index">
+                        <section id="loginFormUsers" style="visibility:visible;text-align:center" value="loginFormUsers">
+                            <h2>Connexion</h2>
+                            <hr style="border-bottom:2px solid black" />
+                            <h4 style="text-align:left">Login :</h4>
+                            <div class="form-group">
+                                <input type="text" name="LoginUsers" class="form-control" onkeypress="return verifNumber(event) && verifLetter(event)" />
+                            </div>
+
+                            <h4 style="text-align:left">Mot de passe :</h4>
+                            <div class="form-group">
+                                <input type="password" name="PasswordUsers" class="form-control" onkeypress="return verifNumber(event) && verifLetter(event)" />
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6">
+
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <input type="submit" value="Connexion" class="btn btn-primary" style="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="hiddenPhrase" style="visibility:hidden;text-align:center;color:red">Login ou mot de passe inccorect</p>
+                        </section>
+                    </form>
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <br>
+            
+        </article>

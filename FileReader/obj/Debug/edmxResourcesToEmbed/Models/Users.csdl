@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database_CandriamModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id_users" />
+    </Key>
+    <Property Name="id_users" Type="Int32" Nullable="false" />
+    <Property Name="login" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="prenom" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="nom" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="admin" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="Database_CandriamEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Self.Users" />
+  </EntityContainer>
+</Schema>
