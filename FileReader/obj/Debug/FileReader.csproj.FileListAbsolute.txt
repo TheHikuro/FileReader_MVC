@@ -248,3 +248,4 @@ E:\Utilisateurs\Loan\Bureau\FileReader_MVC_GIT\FileReader\obj\Debug\FileReader.c
 E:\Utilisateurs\Loan\Bureau\FileReader_MVC_GIT\FileReader\obj\Debug\FileReader.dll
 E:\Utilisateurs\Loan\Bureau\FileReader_MVC_GIT\FileReader\obj\Debug\FileReader.pdb
 E:\Utilisateurs\Loan\Bureau\FileReader_MVC_GIT\FileReader\bin\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\loancleris\Desktop\FileReader_MVC_GIT\FileReader\bin\fr\EntityFramework.SqlServer.resources.dll

@@ -4,32 +4,37 @@
 }
 
 <head>
-    <style>
-        .body {
-            background-color: grey;
+<style>
+    body {
+        background-color: grey;
+    }
+
+    .bloc {
+            background-color: white;
+            border: 3px solid black;
+            border-radius: 13px;
+            box-shadow: 3px 3px 1px rgba(0,0,0,0.5);
         }
-    </style>
+    
+</style>
 </head>
 
 <h2>Index</h2>
 <article class="container mt-5">
     <div class="row">
         <div class="col-3"></div>
-        <div class="col-6">
-            <div class="row">
-                <form method="post" action="Index/Admin" class="col-12">
-                    <div class="col-5 text-center">
+        <div class="col-6 bloc">
+            <div class="row mt-5 mb-5">
+                <div class="col-6 text-right">
+                    <a href="~/Admin/ListUsers" class="btn btn-primary">Liste Utilisateurs</a>
+                </div>
 
-                        <input type="submit" class="btn btn-primary" value="Liste des utilisateurs" name="ListUsers" />
-                    </div>
-
-                    <div class="col-5 text-center">
-                        <input type="submit" class="btn btn-primary" value="Ajout d'utilisateur" name="AddUsers" />
-                    </div>
-                </form>
-                
+                <div class="col-6 text-left">
+                    <a href="~/Admin/AddUsers" class="btn btn-primary">Ajout Utilisateurs</a>
+                </div>
             </div>
         </div>
+        <div class="col-3"></div>
     </div>
 </article>
 

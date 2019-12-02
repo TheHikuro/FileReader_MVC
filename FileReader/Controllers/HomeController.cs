@@ -7,6 +7,12 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FileReader.Models;
+using System.Configuration;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
 
 
 namespace FileReader.Controllers
@@ -40,9 +46,10 @@ namespace FileReader.Controllers
                             }
                             }
                             else if(login != item.login.Trim() && pass != item.password.Trim())
-                        {
-                            
-                            //Request.Form["hiddenPhrase"] //change le visibilité du style 
+                        { 
+                            string message = "Username and/or password is incorrect.";
+                            ViewBag.Message = message;
+                            return RedirectToAction("index", "Home");
                         }
                         }
                 }

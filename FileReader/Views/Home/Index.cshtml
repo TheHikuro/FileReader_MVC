@@ -28,7 +28,7 @@
 
                 
                 function checkName(form) {
-                    if (document.getElementById("LoginUsers") == false & document.getElementById("PasswordUsers") == false) {
+                    if (document.getElementById('#LoginUsers').val() == false & document.getElementById('#PasswordUsers').val() == false) {
             document.getElementById("hiddenPhrase").style.visibility = "visible";
             return false;
             }
@@ -61,36 +61,42 @@
 <article class="container mt-5">
     <div class="row">
         <div class="col-3"></div>
-        <div class="col-6 bloc">
-            <form method="post" action="/Home/Index" onreturn="return checkName(this)">
-                <section id="loginFormUsers" style="visibility:visible;text-align:center" value="loginFormUsers">
-                    <h2>Connexion</h2>
-                    <hr style="border-bottom:2px solid black" />
-                    <h4 style="text-align:left">Login :</h4>
-                    <div class="form-group">
-                        <input type="text" name="LoginUsers" class="form-control" onkeypress="return verifNumber(event) && verifLetter(event)" />
-                    </div>
-
-                    <h4 style="text-align:left">Mot de passe :</h4>
-                    <div class="form-group">
-                        <input type="password" name="PasswordUsers" class="form-control" onkeypress="return verifNumber(event) && verifLetter(event)" />
-                    </div>
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-6">
-
+        <div class="col-11 bloc">
+            <div class="row">
+                <div class="col-4"> <img style="border:2px solid black; margin-right:15px; margin-top:15px" src="/Content/candriam_logo_metaimg.jpg"/></div>
+                <div class="col-8">
+                    <form method="post" action="/Home/Index" onreturn="return checkName(this)">
+                        <section id="loginFormUsers" style="visibility:visible;text-align:center" value="loginFormUsers">
+                            <h2>Connexion</h2>
+                            <hr style="border-bottom:2px solid black" />
+                            <h4 style="text-align:left">Login :</h4>
+                            <div class="form-group">
+                                <input type="text" name="LoginUsers" class="form-control" onkeypress="return verifNumber(event) && verifLetter(event)" />
                             </div>
-                            <div class="col-6 text-right">
-                                <input type="submit" value="Connexion" id="submitBtn" class="btn btn-primary" onclick="checkName(this)"style="" />
+
+                            <h4 style="text-align:left">Mot de passe :</h4>
+                            <div class="form-group">
+                                <input type="password" name="PasswordUsers" class="form-control" onkeypress="return verifNumber(event) && verifLetter(event)" />
                             </div>
-                        </div>
-                    </div>
-                    <div>
-                        <p id="hiddenPhrase" type="text" style="visibility:hidden;text-align:center;color:red" onclick="checkName(this)"> Login ou mot de passe inccorect <p/>
-                    </div>
-                </section>
-            </form>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6">
+
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <input type="submit" value="Connexion" id="submitBtn" class="btn btn-primary" onclick="checkName(this)" style="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p id="hiddenPhrase" type="text" style="visibility:hidden;text-align:center;color:red" onclick="checkName(this)"> Login ou mot de passe inccorect <p />
+                                
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="col-3"></div>
     </div>

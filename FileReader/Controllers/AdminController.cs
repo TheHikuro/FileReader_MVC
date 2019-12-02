@@ -16,11 +16,8 @@ namespace FileReader.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            List<List<string>> listUsers = new List<List<string>>();
-            foreach(var item in db.Users)
-            {
-                listUsers.Add(new List<string> { item.id_users.ToString(), item.login, item.nom, item.prenom, item.admin.ToString() });
-            }
+            
+            
             if (Request.Form["AddUsers"] != null)
             {
                 return RedirectToAction("AddUsers", "Admin");
@@ -35,12 +32,17 @@ namespace FileReader.Controllers
 
         public ActionResult AddUsers()
         {
-
+            List<List<string>> listUsers = new List<List<string>>();
+            foreach (var item in db.Users)
+            {
+                listUsers.Add(new List<string> { item.id_users.ToString(), item.login, item.nom, item.prenom, item.admin.ToString() });
+            }
             return View();
         }
 
         public ActionResult ListUsers()
         {
+            
             return View();
         }
     }
