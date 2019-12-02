@@ -21,12 +21,26 @@ namespace FileReader.Controllers
             {
                 listUsers.Add(new List<string> { item.id_users.ToString(), item.login, item.nom, item.prenom, item.admin.ToString() });
             }
-            return View(listUsers);
+            if (Request.Form["AddUsers"] != null)
+            {
+                return RedirectToAction("AddUsers", "Admin");
+            }
+
+            if(Request.Form["ListUsers"] != null)
+            {
+                return RedirectToAction("ListUsers", "Admin");
+            }
+            return View();
         }
 
         public ActionResult AddUsers()
         {
 
+            return View();
+        }
+
+        public ActionResult ListUsers()
+        {
             return View();
         }
     }

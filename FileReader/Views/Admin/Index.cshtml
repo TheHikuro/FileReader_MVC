@@ -3,19 +3,33 @@
     ViewBag.Title = "Index";
 }
 
-@{ 
-    List<List<string>> list = new List<List<string>>();
-    list.Add()
-}
-<h2>Index</h2>
+<head>
+    <style>
+        .body {
+            background-color: grey;
+        }
+    </style>
+</head>
 
-<table>
-    <tr>
-        <td>ID</td>
-        <td>Login</td>
-        <td>Nom</td>
-        <td>Prénom</td>
-        <td>Admin</td>
-    </tr>
-    
-</table>
+<h2>Index</h2>
+<article class="container mt-5">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="row">
+                <form method="post" action="Index/Admin" class="col-12">
+                    <div class="col-5 text-center">
+
+                        <input type="submit" class="btn btn-primary" value="Liste des utilisateurs" name="ListUsers" />
+                    </div>
+
+                    <div class="col-5 text-center">
+                        <input type="submit" class="btn btn-primary" value="Ajout d'utilisateur" name="AddUsers" />
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</article>
+

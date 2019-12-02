@@ -214,6 +214,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\Formulaire\Index.cshtml" />
     <Content Include="Views\Admin\AddUsers.cshtml" />
+    <Content Include="Views\Admin\ListUsers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
