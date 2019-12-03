@@ -32,10 +32,13 @@ namespace FileReader.Controllers
 
         public ActionResult AddUsers()
         {
-            List<List<string>> listUsers = new List<List<string>>();
-            foreach (var item in db.Users)
+            if(Request.Form["prenom"] != null && Request.Form["nom"] != null && Request.Form["login"] != null && Request.Form["password"] != null && Request.Form["admin"] != null)
             {
-                listUsers.Add(new List<string> { item.id_users.ToString(), item.login, item.nom, item.prenom, item.admin.ToString() });
+                List<List<string>> listUsers = new List<List<string>>();
+                foreach (var item in db.Users)
+                {
+                    listUsers.Add(new List<string> { item.id_users.ToString(), item.login, item.nom, item.prenom, item.admin.ToString() });
+                }
             }
             return View();
         }
