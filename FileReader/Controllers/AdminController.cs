@@ -32,6 +32,7 @@ namespace FileReader.Controllers
 
         public ActionResult AddUsers()
         {
+            Users user = new Users();
             if(Request.Form["prenom"] != null && Request.Form["nom"] != null && Request.Form["login"] != null && Request.Form["password"] != null && Request.Form["admin"] != null)
             {
                 List<List<string>> listUsers = new List<List<string>>();
@@ -39,6 +40,7 @@ namespace FileReader.Controllers
                 {
                     listUsers.Add(new List<string> { item.id_users.ToString(), item.login, item.nom, item.prenom, item.admin.ToString() });
                 }
+                
             }
             return View();
         }
